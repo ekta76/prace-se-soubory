@@ -11,12 +11,6 @@ public class Main {
         zakaznici.add(new Zakaznik("Josef Výmola", 46));
 
         zakaznici.remove(zakaznici.size() - 1);
-        //EvidenceZakazniku evidenceZakazniku = new EvidenceZakazniku();
-
-        //evidenceZakazniku.addZakaznika(new Zakaznik("Karel Dvořák", 400));
-        //evidenceZakazniku.addZakaznika(new Zakaznik("Josef Výmola", 46));
-
-        //evidenceZakazniku.removePosledniho();
 
         praceSouboru.writeToFile(zakaznici, "zakaznik.txt", line.split(ODDELOVAC));
 
