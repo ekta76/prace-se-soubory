@@ -23,7 +23,7 @@ public class praceSouboru {
         }
     }
 
-    public static void writeToFile(List<Zakaznik> zakaznici, String s, String[] split){
+    public static void writeToFile(List<Zakaznik> zakaznici, String soubor, String oddelovac){
         try {
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("zakaznik.txt")));
 

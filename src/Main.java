@@ -1,10 +1,12 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static final String ODDELOVAC = ":";
     public static void main(String[] args) {
-        String line = "";
 
         List<Zakaznik> zakaznici = new ArrayList<>();
         zakaznici.add(new Zakaznik("Karel Dvořák", 400));
@@ -12,9 +14,10 @@ public class Main {
 
         zakaznici.remove(zakaznici.size() - 1);
 
-        praceSouboru.writeToFile(zakaznici, "zakaznik.txt", line.split(ODDELOVAC));
+        praceSouboru.writeToFile(zakaznici, "zakaznik.txt", ":");
 
         praceSouboru.nactiSoubor("zakaznik.txt");
 
     }
+
 }
