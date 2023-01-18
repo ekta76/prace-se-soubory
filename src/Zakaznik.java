@@ -23,8 +23,16 @@ public class Zakaznik {
         this.pocetProdeju = pocetProdeju;
     }
 
+    public void zvysPocetProdeju(int pocetProdeju){
+        if(pocetProdeju < 0){
+            System.out.println("Neplatné číslo - číslo musí být kladné");
+            return;
+        }
+        this.pocetProdeju += pocetProdeju;
+    }
+
     @Override
     public String toString() {
-        return jmeno + pocetProdeju + "prodáno";
+        return jmeno + pocetProdeju;
     }
 }
