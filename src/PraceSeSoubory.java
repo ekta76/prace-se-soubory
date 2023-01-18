@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class praceSouboru {
+public class PraceSeSoubory {
     public static final String ODDELOVAC = ":";
-    static List<Zakaznik> zaznamZakazniku = new ArrayList<>();
+    public static List<Zakaznik> zaznamZakazniku = new ArrayList<>();
     public static void nactiSoubor(String s){
     String line = ODDELOVAC;
         try {
@@ -28,7 +28,7 @@ public class praceSouboru {
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("zakaznik.txt")));
 
             for(Zakaznik zakaznik : zakaznici){
-                writer.write(zakaznik.getJmeno() + zakaznik.getPocetProdeju());
+                writer.println(zakaznik.getJmeno() + zakaznik.getPocetProdeju());
             }
 
         } catch (IOException e) {
