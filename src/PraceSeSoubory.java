@@ -16,7 +16,6 @@ public class PraceSeSoubory {
                 String[] polozka = line.split(ODDELOVAC);
                 int pocetProdeju = Integer.parseInt(polozka[1]);
                 zaznamZakazniku.add(new Zakaznik(polozka[0], pocetProdeju));
-
             }
         } catch (FileNotFoundException e) {
             System.out.println("Soubor nenalezen");
