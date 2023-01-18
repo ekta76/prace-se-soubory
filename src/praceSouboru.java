@@ -4,15 +4,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class praceSouboru {
-    private final List<Zakaznik> zakaznici = new ArrayList<>();
-    private List<Zakaznik> getZakaznici() {
-        return zakaznici;
-    }
-
-    public static final String ODDELOVAC = ";";
-    List<Zakaznik> zaznamZakazniku = new ArrayList<>();
+    public static final String ODDELOVAC = ":";
+    static List<Zakaznik> zaznamZakazniku = new ArrayList<>();
+    public static void nactiSoubor(String s){
     String line = ODDELOVAC;
-    {
         try {
             Scanner scanner = new Scanner(new BufferedReader(new FileReader("zakaznik.txt")));
 

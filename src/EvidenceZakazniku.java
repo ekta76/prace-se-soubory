@@ -2,15 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EvidenceZakazniku {
-    private final List<Zakaznik> zaznamZakazniku = new ArrayList<>();
+    private final List<Zakaznik> seznamZakazniku = new ArrayList<>();
 
     public List<Zakaznik> getZakazniky() {
-        return zaznamZakazniku;
+        return seznamZakazniku;
     }
     public void addZakaznika(Zakaznik zakaznik){
-        zaznamZakazniku.add(zakaznik);
+        seznamZakazniku.add(zakaznik);
     }
     public void removePosledniho(){
-        zaznamZakazniku.remove(zaznamZakazniku.size() - 1);
+        seznamZakazniku.remove(seznamZakazniku.size() - 1);
     }
 }

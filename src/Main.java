@@ -11,6 +11,7 @@ public class Main {
 
         praceSouboru.writeToFile(evidenceZakazniku.getZakazniky());
 
+        praceSouboru.nactiSoubor("zakaznik.txt");
 
     }
 }
