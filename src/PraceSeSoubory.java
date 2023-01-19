@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PraceSeSoubory {
     public static final String ODDELOVAC = ":";
     public static List<Zakaznik> zaznamZakazniku = new ArrayList<>();
-    public static void nactiSoubor(String s){
+    public static void readFromFile(String s){
     String line = ODDELOVAC;
         try {
             Scanner scanner = new Scanner(new BufferedReader(new FileReader("zakaznik.txt")));
