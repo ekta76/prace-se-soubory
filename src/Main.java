@@ -9,7 +9,7 @@ public class Main {
 
         PraceSeSoubory.writeToFile(PraceSeSoubory.zaznamZakazniku, "zakaznik.txt", ":");
 
-        PraceSeSoubory.readFromFile("zakaznik.txt");
+        PraceSeSoubory.ctiZeSouboru("zakaznik.txt");
 
     }
 

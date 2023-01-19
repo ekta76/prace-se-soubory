@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class PraceSeSoubory {
     public static final String ODDELOVAC = ":";
     public static List<Zakaznik> zaznamZakazniku = new ArrayList<>();
-    public static void readFromFile(String s){
+    public static void ctiZeSouboru(String s){
     String line = ODDELOVAC;
         try {
             Scanner scanner = new Scanner(new BufferedReader(new FileReader("zakaznik.txt")));
@@ -27,12 +27,14 @@ public class PraceSeSoubory {
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("zakaznik.txt")));
 
             for(Zakaznik zakaznik : zakaznici){
-                writer.println(zakaznik.getJmeno() + oddelovac + zakaznik.getPocetProdeju());
+                writer.println(zakaznik.getJmeno().trim() + oddelovac + zakaznik.getPocetProdeju());
             }
             writer.close();
 
         } catch (IOException e) {
-            System.out.println("Zkontrolujte soubor");
+            throw new RuntimeException(
+                    "Chyba při zápisu do souboru"
+                            + soubor+": "+e.getLocalizedMessage());
         }
     }
 

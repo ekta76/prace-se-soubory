@@ -33,6 +33,6 @@ public class Zakaznik {
 
     @Override
     public String toString() {
-        return jmeno + pocetProdeju;
+        return jmeno.trim() + pocetProdeju;
     }
 }
