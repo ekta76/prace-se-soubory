@@ -18,7 +18,7 @@ public class PraceSeSoubory {
                 zaznamZakazniku.add(new Zakaznik(polozka[0], pocetProdeju));
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Soubor nenalezen");
+            throw new RuntimeException("Soubor nenalezen");
         }
     }
 
