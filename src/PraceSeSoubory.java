@@ -27,8 +27,9 @@ public class PraceSeSoubory {
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("zakaznik.txt")));
 
             for(Zakaznik zakaznik : zakaznici){
-                writer.println(zakaznik.getJmeno() + zakaznik.getPocetProdeju());
+                writer.println(zakaznik.getJmeno() + oddelovac + zakaznik.getPocetProdeju());
             }
+            writer.close();
 
         } catch (IOException e) {
             System.out.println("Zkontrolujte soubor");
