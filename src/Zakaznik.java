@@ -1,3 +1,4 @@
+
 public class Zakaznik {
     private String jmeno;
     private int pocetProdeju;
@@ -23,12 +24,11 @@ public class Zakaznik {
         this.pocetProdeju = pocetProdeju;
     }
 
-    public void zvysPocetProdeju(int pocetProdeju){
-        if(pocetProdeju < 0){
-            System.out.println("Neplatné číslo - číslo musí být kladné");
-            return;
+    public void zvysPocetProdeju(int pocet) throws ZException {
+        if(pocet < 0){
+            throw new ZException("Neplatné číslo - číslo musí být kladné: " + pocet + "!");
         }
-        this.pocetProdeju += pocetProdeju;
+        this.pocetProdeju += pocet;
     }
 
     @Override
